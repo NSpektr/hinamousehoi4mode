@@ -1,0 +1,2 @@
+HMM = "countries/Hina Territory.txt"
+TAK = "countries/Takinaki.txt"

@@ -1,0 +1,13 @@
+add_namespace = taki
+
+country_event = {
+	id = taki.1
+	title = taki.1.t
+	desc = taki.1.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = taki.1.a
+	}
+}

@@ -1,0 +1,97 @@
+division_template = {
+	name = "Defense Division"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Special Division"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		
+	}
+}
+units = {
+	division = {
+		name = "1st Defense Division"
+		location = 708
+		division_template = "Defense Division"
+	}
+	division = {
+		name = "2st Defense Division"
+		location = 3423
+		division_template = "Defense Division"
+	}
+	division = {
+		name = "3st Defense Division"
+		location = 3705
+		division_template = "Defense Division"
+	}
+	division = {
+		name = "4st Defense Division"
+		location = 6725
+		division_template = "Defense Division"
+	}
+	division = {
+		name = "5st Defense Division"
+		location = 6725
+		division_template = "Defense Division"
+	}
+	division = {
+		name = "6st Defense Division"
+		location = 11486
+		division_template = "Defense Division"
+	}
+	division = {
+		name = "7st Defense Division"
+		location = 6712
+		division_template = "Defense Division"
+	}
+	division = {
+		name = "8st Defense Division"
+		location = 3541
+		division_template = "Defense Division"
+	}
+	division = {
+		name = "9st Defense Division"
+		location = 3541
+		division_template = "Defense Division"
+	}
+	division = {
+		name = "Hina Division"
+		location = 519
+		division_template = "Special Division"
+	}
+}
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "HMM"
+		}
+		requested_factories = 3
+		progress = 0.2
+		efficiency = 60
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment
+			creator = "HMM"
+		}
+		requested_factories = 2
+		progress = 0.14
+		efficiency = 50
+	}
+}

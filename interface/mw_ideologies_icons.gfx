@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ideology_hinaism"
+		texturefile = "gfx/ideologies/hinaism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_hinaism"
+		texturefile = "gfx/ideologies/hinaism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_marxism_hinaism"
+		texturefile = "gfx/ideologies/hinaism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_national_hinaism"
+		texturefile = "gfx/ideologies/hinaism.dds"
+	}
+}

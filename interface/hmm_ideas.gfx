@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_hina_idea"
+		texturefile = "gfx/interface/ideas/GFX_hina_idea.tga"
+	}
+}

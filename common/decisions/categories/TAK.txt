@@ -1,0 +1,9 @@
+TAK_integrate_category = {
+	allowed = {
+		tag = TAK
+	}
+	visible = {
+		has_completed_focus = TAK_creation_of_protectorat_focus
+	}
+	priority = 100
+}

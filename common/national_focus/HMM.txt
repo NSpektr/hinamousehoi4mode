@@ -1,0 +1,80 @@
+focus_tree = {
+	id = HMM_standard_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = HMM
+		}
+	}
+	continuous_focus_position = { x = 2400 y = 2400 }
+	
+	shared_focus = HMM_unexpected_appearance_focus
+}
+
+focus_tree = {
+	id = HMM_territory_tree
+	
+	country = {
+		factor = 0
+	}
+	continuous_focus_position = { x = 2400 y = 2400 }
+	
+	shared_focus = HMM_unstable_situation_focus
+}
+
+focus_tree = {
+	id = HMM_territory_plus_tree
+	
+	country = {
+		factor = 0
+	}
+	continuous_focus_position = { x = 2400 y = 2400 }
+	
+	shared_focus = HMM_unstable_situation_focus
+	shared_focus = HMM_expand_power_of_council_focus
+	shared_focus = HMM_save_power_balance_focus
+	shared_focus = HMM_abolish_council_focus
+}
+
+focus_tree = {
+	id = HMM_republic_tree
+	
+	country = {
+		factor = 0
+	}
+	continuous_focus_position = { x = 2400 y = 2400 }
+	
+	shared_focus = HMM_republic_kamyshnya_focus
+}
+
+focus_tree = {
+	id = HMM_territory_council_tree
+	
+	country = {
+		factor = 0
+	}
+	continuous_focus_position = { x = 2400 y = 2400 }
+	
+}
+
+focus_tree = {
+	id = HMM_territory_balance_of_power_tree
+	
+	country = {
+		factor = 0
+	}
+	continuous_focus_position = { x = 2400 y = 2400 }
+	
+	
+}
+
+focus_tree = {
+	id = HMM_territory_hina_tree
+	
+	country = {
+		factor = 0
+	}
+	continuous_focus_position = { x = 2400 y = 2400 }
+}

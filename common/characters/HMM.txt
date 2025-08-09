@@ -1,0 +1,217 @@
+characters = {
+	HMM_hina = {
+		name = HMM_hina
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HMM_hina.tga"
+			}
+		}
+		country_leader = {
+			ideology = hinaism
+			desc = HMM_hina_desc
+			id = -1
+		}
+	}
+	
+	HMM_council = {
+		name = HMM_council
+		portraits = {
+			civilian = {
+				#large = 
+			}
+		}
+		country_leader = {
+			ideology = hinaism
+			desc = HMM_council_desc
+			id = -1
+		}
+	}
+	
+	HMM_hina_dem = {
+		name = HMM_hina_dem
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HMM_hina.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_hinaism
+			desc = HMM_hina_dem_desc
+			id = -1
+		}
+	}
+	
+	HMM_takinakero = {
+		name = HMM_takinakero
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HMM_placeholder.tga"
+				small = "gfx/leaders/HMM_advisor_placeholder.tga"
+			}
+			army = {
+				large = "gfx/leaders/HMM_placeholder.tga"
+				small = "gfx/leaders/HMM_advisor_placeholder.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_hinaism
+			desc = HMM_president_takinakero_desc
+			id = -1
+		}
+		advisor = {
+			slot = theorist
+			#idea_token = HMM_takinakero_idea
+			ledger = army
+			traits = { military_theorist }
+		}
+		field_marshal = {
+			skill = 10
+			attack_skill = 8
+			defense_skill = 8
+			planning_skill = 7
+			logistics_skill = 8
+		}
+	}
+	
+	HMM_hina_com = {
+		name = HMM_hina_com
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HMM_hina.tga"
+			}
+		}
+		country_leader = {
+			ideology = marxism_hinaism
+			desc = HMM_hina_com_desc
+			id = -1
+		}
+	}
+	
+	HMM_hina_fas = {
+		name = HMM_hina_fas
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HMM_hina.tga"
+			}
+		}
+		country_leader = {
+			ideology = national_hinaism
+			desc = HMM_hina_fas_desc
+			id = -1
+		}
+	}
+	
+	#GENERALS ONLY
+	HMM_doom_SCP_106 = {
+		name = HMM_doom_SCP_106
+		portraits = {
+			civilian = {
+				#large =
+				#small =
+			}
+		}
+		field_marshal = {
+			skill = 8
+			attack_skill = 7
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+		}
+	}
+	HMM_doom_Gravity_Eater = {
+		name = HMM_doom_Gravity_Eater
+		portraits = {
+			civilian = {
+				#large =
+				#small =
+			}
+		}
+		corps_commander = {
+			skill = 6
+			attack_skill = 8
+			defense_skill = 6
+			planning_skill = 6
+			logistics_skill = 6
+		}
+	}
+	HMM_doom_Spiderpool = {
+		name = HMM_doom_Spiderpool
+		portraits = {
+			civilian = {
+				#large =
+				#small =
+			}
+		}
+		corps_commander = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 6
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	HMM_doom_Nightmare_Batman = {
+		name = HMM_doom_Nightmare_Batman
+		portraits = {
+			civilian = {
+				#large =
+				#small =
+			}
+		}
+		corps_commander = {
+			skill = 5
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 5
+		}
+	}
+	HMM_doom_Venom_2099 = {
+		name = HMM_doom_Venom_2099
+		portraits = {
+			civilian = {
+				#large =
+				#small =
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 9
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 5
+		}
+	}
+	HMM_doom_Dark_Spider_Man = {
+		name = HMM_doom_Dark_Spider_Man
+		portraits = {
+			civilian = {
+				#large =
+				#small =
+			}
+		}
+		corps_commander = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	HMM_doom_Quantum_Hunter = {
+		name = HMM_doom_Quantum_Hunter
+		portraits = {
+			civilian = {
+				#large =
+				#small =
+			}
+		}
+		corps_commander = {
+			skill = 6
+			attack_skill = 8
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 6
+		}
+	}
+}

@@ -1,0 +1,33 @@
+characters = {
+	TAK_takinakero = {
+		name = TAK_takinakero
+		portrait = {
+			civilian = {
+				large = "gfx/leaders/HMM_placeholder.tga"
+				small = "gfx/leaders/HMM_advisor_placeholder.tga"
+			}
+			army = {
+				large = "gfx/leaders/HMM_placeholder.tga"
+				small = "gfx/leaders/HMM_advisor_placeholder.tga"
+			}
+		}
+		country_leader = {
+			ideology = hinaism
+			desc = TAK_takinakero_desc
+			id = -1
+		}
+		advisor = {
+			slot = theorist
+			#idea_token = TAK_takinakero_idea
+			ledger = army
+			traits = { military_theorist }
+		}
+		field_marshal = {
+			skill = 10
+			attack_skill = 8
+			defense_skill = 8
+			planning_skill = 7
+			logistics_skill = 8
+		}
+	}
+}

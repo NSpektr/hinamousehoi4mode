@@ -1,0 +1,105 @@
+ideas = {
+	country = {
+		HMM_against_germany_idea = {
+			#picture = 
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		HMM_unruly_north_idea = {
+			#picture =
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				production_speed_buildings_factor = -0.2
+				fascism_drift = 0.05
+			}
+		}
+		HMM_unrecognized_state_idea = {
+			#picture = 
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = -0.2
+			}
+		}
+		HMM_council_idea = {
+			#picture = 
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+			}
+		}
+		HMM_north_autonomy_idea = {
+			#picture = 
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				fascism_drift = 0.02
+			}
+		}
+		HMM_north_cleaning_idea = {
+			#picture =
+			modifier = {
+				political_power_factor = -0.1
+				war_support_factor = -0.1
+				fascism_drift = -0.1
+			}
+		}
+		HMM_dont_care_about_it_idea = {
+			#picture = 
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.05
+			}
+		}
+		HMM_hina_idea = {
+			picture = hina_idea
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = 0.05
+			}
+		}
+		HMM_hina_legion_idea = {
+			#picture =
+			modifier = {
+				army_speed_factor = 0.1
+				army_defence_factor = 0.15
+				army_attack_factor = 0.15
+				fascism_drift = 0.05
+			}
+		}
+		HMM_industrial_miracle_idea = {
+			#picture =
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				consumer_goods_factor = -0.1
+			}
+		}
+		HMM_active_research_idea = {
+			#picture = 
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+		HMM_save_our_territory_idea = {
+			#picture =
+			modifier = {
+				army_core_defense_factor = 0.2
+				army_core_attack_factor = 0.2
+			}
+		}
+		HMM_perfect_isolation_idea = {
+			#picture =
+			modifier = {
+				stability_factor = 0.5
+				political_power_factor = 0.2
+				neutrality_drift = 0.05
+			}
+		}
+	}
+}

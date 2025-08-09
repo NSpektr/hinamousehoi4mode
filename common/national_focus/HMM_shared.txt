@@ -1,0 +1,1034 @@
+shared_focus = {
+	id = HMM_unexpected_appearance_focus
+	
+	x = 5
+	y = 0
+	cost = 3
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		country_event = { id = hina.1 }
+	}
+}
+
+shared_focus = {
+	id = HMM_territorys_future_focus
+	
+	x = 5
+	y = 1
+	cost = 3
+	
+	prerequisite = { focus = HMM_unexpected_appearance_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		country_event = { id = hina.2 }
+	}
+}
+
+shared_focus = {
+	id = HMM_defense_plan_focus
+	
+	x = 5
+	y = 2
+	cost = 3
+	
+	prerequisite = { focus = HMM_territorys_future_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		country_event = { id = hina.3 }
+	}
+}
+
+shared_focus = {
+	id = HMM_preventive_hit_focus
+	
+	x = 5
+	y = 3
+	cost = 3
+	
+	prerequisite = { focus = HMM_defense_plan_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+			target = GER
+		}
+	}
+}
+
+shared_focus = {
+	id = HMM_victory_of_hina_focus
+	
+	x = 5
+	y = 4
+	cost = 3
+	
+	prerequisite = { focus = HMM_preventive_hit_focus }
+	
+	available = {
+		NOT = {
+			country_exists = GER
+		}
+	}
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		hidden_effect = {
+			51 = {
+				add_core_of = HMM
+			}
+			57 = {
+				add_core_of = HMM
+			}
+			56 = {
+				add_core_of = HMM
+			}
+			59 = {
+				add_core_of = HMM
+			}
+			58 = {
+				add_core_of = HMM
+			}
+			60 = {
+				add_core_of = HMM
+			}
+			65 = {
+				add_core_of = HMM
+			}
+			64 = {
+				add_core_of = HMM
+			}
+			61 = {
+				add_core_of = HMM
+			}
+		    62 = {
+				add_core_of = HMM
+			}
+			68 = {
+				add_core_of = HMM
+			}
+			63 = {
+				add_core_of = HMM
+			}
+		}
+		custom_effect_tooltip = HMM_nationalize_GER_tt
+		country_event = { id = hina.4 }
+		hidden_effect = {
+			add_ideas = HMM_unruly_north_idea
+			add_ideas = HMM_unrecognized_state_idea
+			if = {
+				limit = { has_idea = HMM_against_germany_idea }
+				remove_ideas = HMM_against_germany_idea
+			}
+		}
+	}
+}
+#TERRITORY FOCUSES
+shared_focus = {
+	id = HMM_unstable_situation_focus
+	
+	x = 10
+	y = 1
+	cost = 5
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		country_event = { id = hina.5 }
+	}
+}
+shared_focus = {
+	id = HMM_create_council_focus
+	
+	x = 10
+	y = 2
+	cost = 5
+	
+	prerequisite = { focus = HMM_unstable_situation_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_political_power = 100
+		add_ideas = HMM_council_idea
+	}
+}
+shared_focus = {
+	id = HMM_north_autonomy_focus
+	
+	x = 8
+	y = 3
+	cost = 5
+	
+	prerequisite = { focus = HMM_create_council_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = HMM_unruly_north_idea
+			add_idea = HMM_north_autonomy_idea
+		}
+	}
+}
+shared_focus = {
+	id = HMM_cleaning_north_focus
+	
+	x = 8
+	y = 4
+	cost = 5
+	
+	prerequisite = { focus = HMM_north_autonomy_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_timed_idea = {
+			idea = HMM_north_cleaning_idea
+			days = 180
+		}
+	}
+}
+shared_focus = {
+	id = HMM_integrate_north_focus
+	
+	x = 8
+	y = 5
+	cost = 5
+	
+	available = {
+		NOT = { has_idea = HMM_north_cleaning_idea }
+	}
+	
+	prerequisite = { focus = HMM_cleaning_north_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		remove_ideas = HMM_north_autonomy_idea
+	}
+}
+shared_focus = {
+	id = HMM_request_recognition_focus
+	
+	x = 12
+	y = 3
+	cost = 5
+	
+	prerequisite = { focus = HMM_create_council_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		SOV = { country_event = { id = hina_outer.1 } }
+		ENG = { country_event = { id = hina_outer.1 } }
+		FRA = { country_event = { id = hina_outer.1 } }
+	}
+}
+shared_focus = {
+	id = HMM_no_longer_unrecognized_focus
+	
+	x = 12
+	y = 4
+	cost = 5
+	
+	available = {
+		has_country_flag = HMM_acception_flag
+	}
+	
+	prerequisite = { focus = HMM_request_recognition_focus }
+	mutually_exclusive = { focus = HMM_failure_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		remove_ideas = HMM_unrecognized_state_idea
+	}
+}
+shared_focus = {
+	id = HMM_failure_focus
+	
+	x = 14
+	y = 4
+	cost = 5
+	
+	available = {
+		NOT = { has_country_flag = HMM_acception_flag }
+	}
+	
+	prerequisite = { focus = HMM_request_recognition_focus }
+	mutually_exclusive = { focus = HMM_no_longer_unrecognized_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_political_power = -100
+	}
+}
+shared_focus = {
+	id = HMM_dont_care_about_it_focus
+	
+	x = 14
+	y = 5
+	cost = 5
+	
+	prerequisite = { focus = HMM_failure_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = HMM_unrecognized_state_idea
+			add_idea = HMM_dont_care_about_it_idea
+		}
+	}
+}
+shared_focus = {
+	id = HMM_stabilization_focus
+	
+	x = 10
+	y = 6
+	cost = 5
+	
+	prerequisite = { focus = HMM_integrate_north_focus }
+	prerequisite = { focus = HMM_no_longer_unrecognized_focus focus = HMM_dont_care_about_it_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_stability = 0.2
+		hidden_effect = {
+			clr_country_flag = HMM_acception_flag 
+			load_focus_tree = {
+				tree = HMM_territory_plus_tree
+				keep_completed = yes
+			}
+			country_event = { id = hina.6 days = 10 }
+		}
+	}
+}
+shared_focus = {
+	id = HMM_expand_power_of_council_focus
+	
+	available = {
+		has_country_flag = HMM_soviet_wins_flag
+	}
+	
+	x = 8
+	y = 8
+	cost = 5
+	
+	mutually_exclusive = { focus = HMM_save_power_balance_focus }
+	mutually_exclusive = { focus = HMM_abolish_council_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		country_event = { id = hina.7 }
+		hidden_effect = {
+			country_event = { id = hina.10 days = 10 }
+		}
+	}
+}
+shared_focus = {
+	id = HMM_isolationalism_focus
+	
+	x = 8
+	y = 10
+	cost = 5
+	
+	prerequisite = { focus = HMM_expand_power_of_council_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+		add_stability = 0.05
+	}
+}
+shared_focus = {
+	id = HMM_consolidation_of_power_focus
+	
+	x = 8
+	y = 11
+	cost = 5
+	
+	prerequisite = { focus = HMM_isolationalism_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_political_power = 200
+	}
+}
+shared_focus = {
+	id = HMM_save_our_territory_focus
+	
+	x = 8
+	y = 12
+	cost = 5
+	
+	prerequisite = { focus = HMM_consolidation_of_power_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_ideas = HMM_save_our_territory_idea
+	}
+}
+shared_focus = {
+	id = HMM_perfect_isolation_focus
+	
+	x = 8
+	y = 13
+	cost = 5
+	
+	prerequisite = { focus = HMM_save_our_territory_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_political_power = 100
+		add_stability = 0.2
+		add_ideas = HMM_perfect_isolation_idea
+	}
+}
+shared_focus = {
+	id = HMM_save_power_balance_focus
+	
+	available = {
+		has_country_flag = HMM_compromis_flag
+	}
+	
+	x = 10
+	y = 8
+	cost = 5
+	
+	mutually_exclusive = { focus = HMM_expand_power_of_council_focus }
+	mutually_exclusive = { focus = HMM_abolish_council_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		country_event = { id = hina.8 }
+		hidden_effect = {
+			country_event = { id = hina.10 days = 10 }
+		}
+	}
+}
+shared_focus = {
+	id = HMM_save_foundations_and_expand_territory_focus
+	
+	prerequisite = { focus = HMM_save_power_balance_focus }
+	
+	x = 10
+	y = 10
+	cost = 5
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_political_power = 100
+	}
+}
+shared_focus = {
+	id = HMM_expand_to_benilux_focus
+	
+	prerequisite = { focus = HMM_save_foundations_and_expand_territory_focus }
+	
+	x = 10
+	y = 11
+	cost = 5
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		if = {
+			limit = { country_exists = HOL }
+			create_wargoal = {
+				type = annex_everything
+				target = HOL
+			}
+		}
+		if = {
+			limit = { country_exists = BEL }
+			create_wargoal = {
+				type = annex_everything
+				target = BEL
+			}
+		}
+		if = {
+			limit = { country_exists = LUX }
+			create_wargoal = {
+				type = annex_everything
+				target = LUX
+			}
+		}
+	}
+}
+shared_focus = {
+	id = HMM_integrate_benilux_focus
+	
+	available = {
+		NOT = {
+			country_exists = HOL
+			country_exists = BEL
+			country_exists = LUX
+		}
+	}
+	
+	x = 10
+	y = 12
+	cost = 5
+	
+	prerequisite = { focus = HMM_expand_to_benilux_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		hidden_effect = {
+			36 = {
+				add_core_of = HMM
+			}
+			7 = {
+				add_core_of = HMM
+			}
+			35 = {
+				add_core_of = HMM
+			}
+			977 = {
+				add_core_of = HMM
+			}
+			6 = {
+				add_core_of = HMM
+			}
+			34 = {
+				add_core_of = HMM
+			}
+			980 = {
+				add_core_of = HMM
+			}
+			8 = {
+				add_core_of = HMM
+			}
+		}
+		custom_effect_tooltip = HMM_nationalisation_everything_tt
+	}
+}
+shared_focus = {
+	id = HMM_steady_progress_focus
+	
+	x = 10
+	y = 13 
+	cost = 5
+	
+	prerequisite = { focus = HMM_integrate_benilux_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+shared_focus = {
+	id = HMM_abolish_council_focus
+	
+	available = {
+		has_country_flag = HMM_hina_wins_flag
+	}
+	
+	x = 12
+	y = 8
+	cost = 5
+	
+	mutually_exclusive = { focus = HMM_expand_power_of_council_focus }
+	mutually_exclusive = { focus = HMM_save_power_balance_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		country_event = { id = hina.9 }
+		hidden_effect = { id = hina.10 days = 10 }
+		set_politics = {
+			ruling_party = fascism
+			last_election = "1936.1.1"
+			elections_allowed = no
+		}
+	}
+}
+shared_focus = {
+	id = HMM_start_expansion_focus
+	
+	x = 12
+	y = 10
+	cost = 5
+	
+	prerequisite = { focus = HMM_abolish_council_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		if = {
+			limit = { country_exists = HOL }
+			create_wargoal = {
+				type = annex_everything
+				target = HOL
+			}
+		}
+		if = {
+			limit = { country_exists = BEL }
+			create_wargoal = {
+				type = annex_everything
+				target = BEL
+			}
+		}
+		if = {
+			limit = { country_exists = LUX }
+			create_wargoal = {
+				type = annex_everything
+				target = LUX
+			}
+		}
+	}
+}
+shared_focus = {
+	id = HMM_hit_france_focus
+	
+	x = 12
+	y = 11
+	cost = 5
+	
+	prerequisite = { focus = HMM_start_expansion_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		if = {
+			limit = { country_exists = FRA }
+			create_wargoal = {
+				type = annex_everything
+				target = FRA
+			}
+		}
+	}
+}
+shared_focus = {
+	id = HMM_hina_legion_focus
+	
+	x = 12
+	y = 12
+	cost = 5
+	
+	prerequisite = { focus = HMM_hit_france_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_ideas = HMM_hina_legion_idea
+	}
+}
+shared_focus = {
+	id = HMM_proclaim_new_empire_focus
+	
+	available = {
+		NOT = {
+			country_exists = HOL
+			country_exists = BEL
+			country_exists = LUX
+			country_exists = FRA
+		}
+	}
+	
+	x = 12
+	y = 13
+	cost = 5
+	
+	prerequisite = { focus = HMM_hina_legion_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		country_event = { id = hina.11 }
+		hidden_effect = {
+			news_event = { id = hina_news.1 hours = 6 }
+		}
+	}
+}
+shared_focus = {
+	id = HMM_industrys_developing_focus
+	
+	x = 5
+	y = 9
+	cost = 5
+	
+	prerequisite = { 
+		focus = HMM_expand_power_of_council_focus
+		focus = HMM_save_power_balance_focus
+		focus = HMM_abolish_council_focus
+	}
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = industry
+		}
+	}
+}
+shared_focus = {
+	id = HMM_new_fabrics_focus
+	
+	x = 5
+	y = 10
+	cost = 5
+	
+	prerequisite = { focus = HMM_industrys_developing_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		54 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		55 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = HMM_new_arm_factories_focus
+	
+	x = 5
+	y = 11
+	cost = 5
+	
+	prerequisite = { focus = HMM_new_fabrics_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		52 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		978 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = HMM_industrial_miracle_focus
+	
+	x = 5
+	y = 12
+	cost = 5
+	
+	prerequisite = { focus = HMM_new_arm_factories_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		55 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		60 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_ideas = HMM_industrial_miracle_idea
+	}
+}
+shared_focus = {
+	id = HMM_new_infantry_focus
+	
+	x = 15
+	y = 9
+	cost = 5
+	
+	prerequisite = {
+		focus = HMM_expand_power_of_council_focus
+		focus = HMM_save_power_balance_focus
+		focus = HMM_abolish_council_focus
+	}
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = infantry_weapons
+		}
+	}
+}
+shared_focus = {
+	id = HMM_new_research_center_focus
+	
+	x = 15
+	y = 10
+	cost = 5
+	
+	prerequisite = { focus = HMM_new_infantry_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+shared_focus = {
+	id = HMM_first_tank_researches_focus 
+	
+	x = 15
+	y = 11
+	cost = 5
+	
+	prerequisite = { focus = HMM_new_research_center_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = cat_medium_armor
+		}
+	}
+}
+shared_focus = {
+	id = HMM_active_research_focus
+	
+	x = 15
+	y = 12
+	cost = 5
+	
+	prerequisite = { focus = HMM_first_tank_researches_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_ideas = HMM_active_research_idea
+	}
+}
+shared_focus = {
+	id = HMM_looking_to_future_focus
+	
+	x = 10
+	y = 14
+	cost = 5
+	
+	prerequisite = { 
+		focus = HMM_proclaim_new_empire_focus 
+		focus = HMM_steady_progress_focus
+		focus = HMM_perfect_isolation_focus
+	}
+	prerequisite = { focus = HMM_industrial_miracle_focus }
+	prerequisite = { focus = HMM_active_research_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = HMM_expand_power_of_council_focus }
+				load_focus_tree = HMM_territory_council_tree
+			}
+			if = {
+				limit = { has_completed_focus = HMM_save_power_balance_focus }
+				load_focus_tree = HMM_territory_balance_of_power_tree
+			}
+			if = {
+				limit = { has_completed_focus = HMM_abolish_council_focus }
+				load_focus_tree = HMM_territory_hina_tree
+			}
+		}
+		custom_effect_tooltip = HMM_looking_to_future_tt
+	}
+}
+#HINA SOVIET PATH (Will be released closer to the weekend :>)
+#HINA BALANCE PATH
+#HINA EMPIRE PATH
+#REPUBLIC FOCUSES
+shared_focus = {
+	id = HMM_republic_kamyshnya_focus
+	
+	x = 10
+	y = 1
+	cost = 5
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		
+	}
+}
