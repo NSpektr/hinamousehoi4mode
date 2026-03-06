@@ -1,0 +1,13 @@
+leader_traits = {
+	SUF_brilliant_strategist_trait = {
+		random = no
+		command_power_gain = 0.1
+		army_defence_factor = 0.2
+		army_attack_factor = 0.2
+	}
+	SUF_brilliant_strategist_army_trait = {
+		random = no
+		army_defence_factor = 0.1
+		army_attack_factor = 0.1
+	}
+}

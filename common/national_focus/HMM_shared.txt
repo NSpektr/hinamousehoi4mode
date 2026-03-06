@@ -1,0 +1,236 @@
+#Start focuses
+shared_focus = {
+	id = HMM_hina_territory_focus
+	
+	x = 10
+	y = 0
+	cost = 5
+	
+	#icon = GFX_focus_HMM_hina_territory
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		country_event = { id = hina.1 }
+	}
+}
+shared_focus = {
+	id = HMM_for_peoples_focus
+
+	x = 1
+	y = 1
+	relative_position_id = HMM_hina_territory_focus
+	
+	prerequisite = { focus = HMM_hina_territory_focus }
+	cost = 5
+
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+shared_focus = {
+	id = HMM_for_hina_focus
+
+	x = -1
+	y = 1
+	relative_position_id = HMM_hina_territory_focus
+
+	prerequisite = { focus = HMM_hina_territory_focus }
+	cost = 5
+
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		add_political_power = 100
+	}
+}
+shared_focus = {
+	id = HMM_stagnation_problem_focus
+
+	x = 1
+	y = 1
+	relative_position_id = HMM_for_hina_focus
+
+	prerequisite = { focus = HMM_for_hina_focus }
+	prerequisite = { focus = HMM_for_peoples_focus }
+	cost = 5
+
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		country_event = { id = hina.2 }
+	}
+}
+shared_focus = {
+	id = HMM_radical_reforms_focus
+
+	available = {
+		has_country_flag = HMM_radical_reforms_flag
+	}
+
+	x = -1
+	y = 1
+	relative_position_id = HMM_stagnation_problem_focus
+
+	mutually_exclusive = { focus = HMM_soft_reforms_focus }
+	prerequisite = { focus = HMM_stagnation_problem_focus }
+	cost = 5
+
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = HMM_radical_reform_tt
+		hidden_effect = {
+			set_variable = {
+				var = people_nagation
+				value = 0
+			}
+		}
+	}
+}
+shared_focus = {
+	id = HMM_war_with_corruption_focus
+
+	x = 0
+	y = 1
+	relative_position_id = HMM_radical_reforms_focus
+
+	prerequisite = { focus = HMM_radical_reforms_focus }
+	cost = 5
+
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		add_stability = -0.1
+		add_political_power = -50
+		add_timed_idea ={
+			idea = HMM_war_with_corruption_idea
+			days = 100
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = people_nagation
+				value = 1
+			}
+		}
+		custom_effect_tooltip = HMM_people_nagation_small_rise_tt
+	}
+}
+shared_focus = {
+	id = HMM_quick_industrialisation_plans_focus
+
+	x = 0
+	y = 1
+	relative_position_id = HMM_war_with_corruption_focus
+
+	prerequisite = { focus = HMM_war_with_corruption_focus }
+	cost = 5
+
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = HMM_quick_industrial_plans_idea
+			days = 365
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = people_nagation
+				value = 1
+			}
+		}
+		custom_effect_tooltip = HMM_people_nagation_small_rise_tt
+	}
+}
+shared_focus = {
+	id = HMM_new_production_tech_focus
+
+	x = -2
+	y = 1
+	relative_position_id = HMM_radical_reforms_focus
+
+	prerequisite = { focus = HMM_radical_reforms_focus }
+	cost = 5
+
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = HMM_new_production_tech_idea
+			days = 300
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = people_nagation
+				value = 1
+			}
+		}
+		custom_effect_tooltip = HMM_people_nagation_small_rise_tt
+	}
+}
+shared_focus = {
+	id = HMM_soft_reforms_focus
+
+	available = {
+		has_country_flag = HMM_soft_reforms_flag
+	}
+
+	x = 1
+	y = 1
+	relative_position_id = HMM_stagnation_problem_focus
+
+	mutually_exclusive = { focus = HMM_radical_reforms_focus }
+	prerequisite = { focus = HMM_stagnation_problem_focus }
+	cost = 8
+
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = HMM_soft_reforms_tt
+	}
+}
+
+shared_focus = {
+	id = HMM_unite_focus
+	
+	x = 5
+	y = 0
+	cost = 3
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		country_event = { id = hina.1 }
+	}
+}

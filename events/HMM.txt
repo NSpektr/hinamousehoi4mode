@@ -1,0 +1,972 @@
+add_namespace = hina
+add_namespace = hina_territory
+add_namespace = hina_republic
+add_namespace = hina_outer
+add_namespace = hina_result
+add_namespace = hina_news
+add_namespace = hina_civil
+add_namespace = lore_diary
+
+#LORE DIARY
+country_event = {
+	id = lore_diary.1
+	title = lore_diary.1.t
+	desc = lore_diary.1.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lore_diary.1.a
+	}
+}
+country_event = {
+	id = lore_diary.2
+	title = lore_diary.2.t
+	desc = lore_diary.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = lore_diary.2.a
+	}
+}
+country_event = {
+	id = lore_diary.3
+	title = lore_diary.3.t
+	desc = lore_diary.3.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = lore_diary.3.a
+	}
+}
+country_event = {
+	id = lore_diary.4
+	title = lore_diary.4.t
+	desc = lore_diary.4.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = lore_diary.4.a
+	}
+}
+country_event = {
+	id = lore_diary.5
+	title = lore_diary.5.t
+	desc = lore_diary.5.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = lore_diary.5.a
+	}
+}
+country_event = {
+	id = lore_diary.6
+	title = lore_diary.6.t
+	desc = lore_diary.6.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = lore_diary.6.a
+	}
+}
+country_event = {
+	id = lore_diary.7
+	title = lore_diary.7.t
+	desc = lore_diary.7.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = lore_diary.7.a
+	}
+}
+country_event = {
+	id = lore_diary.8
+	title = lore_diary.8.t
+	desc = lore_diary.8.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = lore_diary.8.a
+	}
+}
+country_event = {
+	id = lore_diary.9
+	title = lore_diary.9.t
+	desc = lore_diary.9.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = lore_diary.9.a
+	}
+}
+country_event = {
+	id = lore_diary.10
+	title = lore_diary.10.t
+	desc = lore_diary.10.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = lore_diary.10.a
+	}
+}
+
+#NEWS
+
+#EVENTS
+country_event = {
+	id = hina.1
+	title = hina.1.t
+	desc = hina.1.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hina.1.a
+		
+		add_stability = 0.2
+	}
+}
+country_event = {
+	id = hina.2
+	title = hina.2.t
+	desc = hina.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = hina.2.a
+		set_country_flag = HMM_radical_reforms_flag
+	}
+
+	option = {
+		name = hina.2.b
+		set_country_flag = HMM_soft_reforms_flag
+	}
+}
+
+#Civil war
+country_event = {
+	id = hina_civil.1
+	title = hina_civil.1.t
+	desc = hina_civil.1.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = hina_civil.1.a
+	}
+}
+
+##NEWS
+#news_event = { #Hina's Empire :>
+#	id = hina_news.1
+#	title = hina_news.1.t
+#	desc = hina_news.1.desc
+#	
+#	picture = GFX_hina_news_1
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_news.1.a
+#		trigger = {
+#			tag = HMM
+#		}
+#	}
+#	option = {
+#		name = hina_news.1.b
+#		trigger = {
+#			NOT = { tag = HMM }
+#		}
+#	}
+#}
+#
+##OUTER EVENTS
+#country_event = { #Non aggression pact? (For Britain, France and USSR)
+#	id = hina_outer.1
+#	title = hina_outer.1.t
+#	desc = hina_outer.1.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_outer.1.a
+#		HMM = {
+#			country_event = { id = hina_result.1 }
+#		}
+#	}
+#	option = {
+#		name = hina_outer.1.b
+#		HMM = {
+#			country_event = { id = hina_result.2 }
+#		}
+#	}
+#}
+#
+##RESULT EVENTS
+#country_event = { #Accept
+#	id = hina_result.1
+#	title = hina_result.1.t
+#	desc = hina_result.1.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_result.1.a
+#		add_political_power = 10
+#		diplomatic_relation = {
+#			country = FROM
+#			relation = non_aggression_pact
+#			active = yes
+#		}
+#		hidden_effect = {
+#			if = {
+#				limit = { NOT = { has_country_flag = HMM_acception_flag } }
+#				set_country_flag = HMM_acception_flag
+#			}
+#		}
+#	}
+#}
+#country_event = { #Unaccept
+#	id = hina_result.2
+#	title = hina_result.2.t
+#	desc = hina_result.2.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_result.2.a
+#		add_political_power = -10
+#	}
+#}
+#
+##EVENTS
+#country_event = {
+#	id = hina.1
+#	title = hina.1.t
+#	desc = hina.1.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina.1.a
+#		add_stability = 0.1
+#		add_political_power = 100
+#	}
+#	
+#	option = {
+#		name = hina.1.b
+#		add_war_support = 0.1
+#		add_political_power = 100
+#	}
+#	
+#	option = {
+#		name = hina.1.c
+#		add_stability = 0.05
+#		add_war_support = 0.15
+#		add_political_power = -50
+#	}
+#}
+#
+#country_event = {
+#	id = hina.2
+#	title = hina.2.t
+#	desc = hina.2.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina.2.a
+#		add_stability = 0.1
+#		add_war_support = -0.05
+#	}
+#	
+#	option = {
+#		name = hina.2.b
+#		add_stability = 0.05
+#		add_war_support = 0.05
+#		add_political_power = -50
+#	}
+#	
+#	option = {
+#		name = hina.2.c
+#		add_stability = -0.05
+#		add_war_support = 0.1
+#		add_political_power = -200
+#	}
+#}
+#
+#country_event = {
+#	id = hina.3
+#	title = hina.3.t
+#	desc = hina.3.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina.3.a
+#		52 = {
+#			create_unit = {
+#				division = "name = \"Defese Force\" division_template = \"Defense Division\""
+#				count = 3
+#				owner = HMM
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = hina.3.b
+#		add_manpower = 20000
+#	}
+#	
+#	option = {
+#		name = hina.3.c
+#		add_ideas = HMM_against_germany_idea
+#	}
+#}
+#
+#country_event = {
+#	id = hina.4
+#	title = hina.4.t
+#	desc = hina.4.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina.4.a
+#		load_focus_tree = HMM_territory_tree
+#	}
+#	
+#	option = {
+#		name = hina.4.b
+#		load_focus_tree = HMM_republic_tree
+#	}
+#}
+#
+#country_event = {
+#	id = hina.5
+#	title = hina.5.t
+#	desc = hina.5.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina.5.a
+#	}
+#}
+#
+#country_event = {
+#	id = hina.6
+#	title = hina.6.t
+#	desc = hina.6.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina.6.a
+#		set_country_flag = HMM_soviet_wins_flag
+#	}
+#	option = {
+#		name = hina.6.b
+#		set_country_flag = HMM_compromis_flag
+#	}
+#	option = {
+#		name = hina.6.c
+#		set_country_flag = HMM_hina_wins_flag
+#	}
+#}
+#
+#country_event = {
+#	id = hina.7
+#	title = hina.7.t
+#	desc = hina.7.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina.7.a
+#		clr_country_flag = HMM_soviet_wins_flag
+#		add_ideas = HMM_hina_idea
+#	}
+#}
+#
+#country_event = {
+#	id = hina.8
+#	title = hina.8.t
+#	desc = hina.8.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina.8.a
+#		clr_country_flag = HMM_compromis_flag
+#	}
+#}
+#
+#country_event = {
+#	id = hina.9
+#	title = hina.9.t
+#	desc = hina.9.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina.9.a
+#		remove_ideas = HMM_council_idea
+#		clr_country_flag = HMM_hina_wins_flag
+#	}
+#}
+#
+#country_event = {
+#	id = hina.10
+#	title = hina.10.t
+#	desc = hina.10.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina.10.a
+#	}
+#	
+#	option = {
+#		name = hina.10.b
+#		TAK = {
+#			set_state_owner = 763
+#			set_state_owner = 5
+#		}
+#	}
+#	
+#	option = {
+#		name = hina.10.c
+#		TAK = {
+#			set_state_owner = 763
+#			set_state_owner = 5
+#		}
+#		tag = TAK
+#	}
+#}
+#
+#country_event = {
+#	id = hina.11
+#	title = hina.11.t
+#	desc = hina.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina.11.a
+#		set_cosmetic_tag = HMM_IMPERIUM
+#		hidden_effect = {
+#			36 = {
+#				add_core_of = HMM
+#			}
+#			7 = {
+#				add_core_of = HMM
+#			}
+#			35 = {
+#				add_core_of = HMM
+#			}
+#			977 = {
+#				add_core_of = HMM
+#			}
+#			980 = {
+#				add_core_of = HMM
+#			}
+#			34 = {
+#				add_core_of = HMM
+#			}
+#			6 = {
+#				add_core_of = HMM
+#			}
+#			8 = {
+#				add_core_of = HMM
+#			}
+#			29 = {
+#				add_core_of = HMM
+#			}
+#			18 = {
+#				add_core_of = HMM
+#			}
+#			28 = {
+#				add_core_of = HMM
+#			}
+#			17 = {
+#				add_core_of = HMM
+#			}
+#			735 = {
+#				add_core_of = HMM
+#			}
+#			651 = {
+#				add_core_of = HMM
+#			}
+#			21 = {
+#				add_core_of = HMM
+#			}
+#			22 = {
+#				add_core_of = HMM
+#			}
+#			31 = {
+#				add_core_of = HMM
+#			}
+#			806 = {
+#				add_core_of = HMM
+#			}
+#			19 = {
+#				add_core_of = HMM
+#			}
+#			23 = {
+#				add_core_of = HMM
+#			}
+#			30 = {
+#				add_core_of = HMM
+#			}
+#			14 = {
+#				add_core_of = HMM
+#			}
+#			15 = {
+#				add_core_of = HMM
+#			}
+#			785 = {
+#				add_core_of = HMM
+#			}
+#			16 = {
+#				add_core_of = HMM
+#			}
+#			24 = {
+#				add_core_of = HMM
+#			}
+#			33 = {
+#				add_core_of = HMM
+#			}
+#			25 = {
+#				add_core_of = HMM
+#			}
+#			26 = {
+#				add_core_of = HMM
+#			}
+#			20 = {
+#				add_core_of = HMM
+#			}
+#			27 = {
+#				add_core_of = HMM
+#			}
+#		}
+#		custome_effect_tooltip = HMM_nationalisation_everything_tt
+#	}
+#}
+#
+#country_event = {
+#	id = hina_republic.1
+#	title = hina_republic.1.t
+#	desc = hina_republic.1.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_republic.1.a
+#		trigger = {
+#			check_variable = {
+#				HMM_taki_support_var > 89
+#			}
+#		}
+#	}
+#	option = {
+#		name = hina_republic.1.b
+#		trigger = {
+#			check_variable = {
+#				HMM_koni_support_var > 89
+#			}
+#		}
+#	}
+#	option = {
+#		name = hina_republic.1.c
+#		trigger = {
+#			check_variable = {
+#				HMM_hebi_support_var > 89
+#			}
+#		}
+#	}
+#	option = {
+#		name = hina_republic.1.d
+#		trigger = {
+#			check_variable = {
+#				HMM_noisy_support_var > 89
+#			}
+#		}
+#	}
+#	option = {
+#		name = hina_republic.1.e
+#		trigger = {
+#			check_variable = {
+#				HMM_hebi_support_var < 90
+#			}
+#			check_variable = {
+#				HMM_taki_support_var < 90
+#			}
+#			check_variable = {
+#				HMM_koni_support_var < 90
+#			}
+#			check_variable = {
+#				HMM_noisy_support_var < 90
+#			}
+#		}
+#		country_event = { id = hina_civil.1 days = 10 }
+#	}
+#}
+#
+#country_event = {
+#	id = hina_republic.2
+#	title = hina_republic.2.t
+#	desc = hina_republic.2.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_republic.2.a
+#	}
+#}
+#
+#country_event = {
+#	id = hina_republic.3
+#	title = hina_republic.3.t
+#	desc = hina_republic.3.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_republic.3.a
+#		add_to_variable = {
+#			var = HMM_taki_support_var
+#			value = 10
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = hina_republic.4
+#	title = hina_republic.4.t
+#	desc = hina_republic.4.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_republic.4.a
+#		add_to_variable = {
+#			var = HMM_koni_support_var
+#			value = 10
+#		}
+#		#recruit_character = HMM_konikeks
+#	}
+#}
+#
+#country_event = {
+#	id = hina_republic.5
+#	title = hina_republic.5.t
+#	desc = hina_republic.5.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_republic.5.a
+#		add_to_variable = {
+#			var = HMM_hebi_support_var
+#			value = 10
+#		}
+#		#recruit_character = HMM_hebi_gnidaruma
+#	}
+#}
+#
+#country_event = {
+#	id = hina_republic.6
+#	title = hina_republic.6.t
+#	desc = hina_republic.6.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_republic.6.a
+#		add_to_variable = {
+#			var = HMM_noisy_support_var
+#			value = 10
+#		}
+#		#recruit_character = HMM_noisy
+#	}
+#}
+#
+#country_event = {
+#	id = hina_republic.7
+#	title = hina_republic.7.t
+#	desc = hina_republic.7.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_republic.7.a
+#		add_to_variable = {
+#			var = HMM_taki_support_var
+#			value = 20
+#		}
+#		if = {
+#			limit = { check_variable = { HMM_taki_support_var > 100 } }
+#			set_variable = {
+#				var = HMM_taki_support_var
+#				value = 100
+#			}
+#		}
+#		custome_effect_tooltip = HMM_taki_support_plus_20_tt
+#	}
+#	option = {
+#		name = hina_republic.7.b
+#		add_to_variable = {
+#			var = HMM_koni_support_var
+#			value = 20
+#		}
+#		if = {
+#			limit = { check_variable = { HMM_koni_support_var > 100 } }
+#			set_variable = {
+#				var = HMM_koni_support_var
+#				value = 100
+#			}
+#		}
+#		custome_effect_tooltip = HMM_koni_support_plus_20_tt
+#	}
+#	option = {
+#		name = hina_republic.7.c
+#		add_to_variable = {
+#			var = HMM_hebi_support_var
+#			value = 20
+#		}
+#		if = {
+#			limit = { check_variable = { HMM_hebi_support_var > 100 } }
+#			set_variable = {
+#				var = HMM_hebi_support_var
+#				value = 100
+#			}
+#		}
+#		custome_effect_tooltip = HMM_hebi_support_plus_20_tt
+#	}
+#	option = {
+#		name = hina_republic.7.d
+#		add_to_variable = {
+#			var = HMM_noisy_support_var
+#			value = 20
+#		}
+#		if = {
+#			limit = { check_variable = { HMM_noisy_support_var > 100 } }
+#			set_variable = {
+#				var = HMM_noisy_support_var
+#				value = 100
+#			}
+#		}
+#		custome_effect_tooltip = HMM_noisy_support_plus_20_tt
+#	}
+#}
+#
+#country_event = {
+#	id = hina_republic.8
+#	title = hina_republic.8.t
+#	desc = hina_republic.8.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_republic.8.a
+#		add_to_variable = {
+#			var = HMM_taki_support_var
+#			value = 10
+#		}
+#		if = {
+#			limit = { check_variable = { HMM_taki_support_var > 100 } }
+#			set_variable = {
+#				var = HMM_taki_support_var
+#				value = 100
+#			}
+#		}
+#		custome_effect_tooltip = HMM_taki_support_plus_10_tt
+#	}
+#	option = {
+#		name = hina_republic.8.b
+#		add_to_variable = {
+#			var = HMM_koni_support_var
+#			value = 10
+#		}
+#		if = {
+#			limit = { check_variable = { HMM_koni_support_var > 100 } }
+#			set_variable = {
+#				var = HMM_koni_support_var
+#				value = 100
+#			}
+#		}
+#		custome_effect_tooltip = HMM_koni_support_plus_10_tt
+#	}
+#	option = {
+#		name = hina_republic.8.c
+#		add_to_variable = {
+#			var = HMM_hebi_support_var
+#			value = 10
+#		}
+#		if = {
+#			limit = { check_variable = { HMM_hebi_support_var > 100 } }
+#			set_variable = {
+#				var = HMM_hebi_support_var
+#				value = 100
+#			}
+#		}
+#		custome_effect_tooltip = HMM_hebi_support_plus_10_tt
+#	}
+#	option = {
+#		name = hina_republic.8.d
+#		add_to_variable = {
+#			var = HMM_noisy_support_var
+#			value = 10
+#		}
+#		if = {
+#			limit = { check_variable = { HMM_noisy_support_var > 100 } }
+#			set_variable = {
+#				var = HMM_noisy_support_var
+#				value = 100
+#			}
+#		}
+#		custome_effect_tooltip = HMM_noisy_support_plus_10_tt
+#	}
+#}
+#
+#country_event = {
+#	id = hina_republic.9
+#	title = hina_republic.9.t
+#	desc = hina_republic.9.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_republic.9.a
+#		add_to_variable = {
+#			var = HMM_taki_support_var
+#			value = 10
+#		}
+#		if = {
+#			limit = { check_variable = { HMM_taki_support_var > 100 } }
+#			set_variable = {
+#				var = HMM_taki_support_var
+#				value = 100
+#			}
+#		}
+#		custome_effect_tooltip = HMM_taki_support_plus_10_tt
+#	}
+#	option = {
+#		name = hina_republic.9.b
+#		add_to_variable = {
+#			var = HMM_koni_support_var
+#			value = 10
+#		}
+#		if = {
+#			limit = { check_variable = { HMM_koni_support_var > 100 } }
+#			set_variable = {
+#				var = HMM_koni_support_var
+#				value = 100
+#			}
+#		}
+#		custome_effect_tooltip = HMM_koni_support_plus_10_tt
+#	}
+#	option = {
+#		name = hina_republic.9.c
+#		add_to_variable = {
+#			var = HMM_hebi_support_var
+#			value = 10
+#		}
+#		if = {
+#			limit = { check_variable = { HMM_hebi_support_var > 100 } }
+#			set_variable = {
+#				var = HMM_hebi_support_var
+#				value = 100
+#			}
+#		}
+#		custome_effect_tooltip = HMM_hebi_support_plus_10_tt
+#	}
+#	option = {
+#		name = hina_republic.9.d
+#		add_to_variable = {
+#			var = HMM_noisy_support_var
+#			value = 10
+#		}
+#		if = {
+#			limit = { check_variable = { HMM_noisy_support_var > 100 } }
+#			set_variable = {
+#				var = HMM_noisy_support_var
+#				value = 100
+#			}
+#		}
+#		custome_effect_tooltip = HMM_noisy_support_plus_10_tt
+#	}
+#}
+#country_event = {
+#	id = hina_republic.10
+#	title = hina_republic.10.t
+#	desc = hina_republic.10.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = hina_republic.10.a
+#		
+#	}
+#}
+#
+#country_event = {
+#	id = hina_civil.1
+#	title = hina_civil.1.t
+#	desc = hina_civil.1.desc
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		hidden_effect = {
+#			51 = {
+#				set_demilitarized_zone = yes
+#			}
+#			57 = {
+#				set_demilitarized_zone = yes
+#			}
+#			56 = {
+#				set_demilitarized_zone = yes
+#			}
+#			59 = {
+#				set_demilitarized_zone = yes
+#			}
+#			58 = {
+#				set_demilitarized_zone = yes
+#			}
+#			60 = {
+#				set_demilitarized_zone = yes
+#			}
+#			65 = {
+#				set_demilitarized_zone = yes
+#			}
+#			64 = {
+#				set_demilitarized_zone = yes
+#			}
+#			61 = {
+#				set_demilitarized_zone = yes
+#			}
+#		    62 = {
+#				set_demilitarized_zone = yes
+#			}
+#			68 = {
+#				set_demilitarized_zone = yes
+#			}
+#			63 = {
+#				set_demilitarized_zone = yes
+#			}
+#		}
+#		custome_effect_tooltip = HMM_north_rebelion_tt
+#	}
+#}

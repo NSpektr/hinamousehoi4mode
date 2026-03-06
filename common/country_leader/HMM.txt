@@ -1,0 +1,36 @@
+leader_traits = {
+	HMM_chmish_trait = {
+		random = no
+		stability_factor = 0.05
+		political_power_gain = 0.05
+	}
+	HMM_vodonos_trait = {
+		random = no
+		stability_factor = 0.2
+		production_factory_efficiency_gain_factor = 0.2
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	HMM_tasik_trait = {
+		random = no
+		stability_factor = -0.05
+		political_power_gain = 0.1
+		consumer_goods_factor = -0.1
+
+		ai_will_do = {
+			base = 4
+		}
+	}
+	HMM_takinakero_trait = {
+		random = no
+		sprite = 1
+		political_power_gain = 0.1
+		stability_factor = 0.1
+		
+		ai_will_do = {
+			base = 2
+		}
+	}
+}

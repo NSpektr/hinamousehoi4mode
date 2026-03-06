@@ -1,0 +1,27 @@
+add_namespace = taki
+add_namespace = taki_over
+
+country_event = {
+	id = taki_over.1
+	title = taki_over.1.t
+	desc = taki_over.1.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = taki_over.1.a
+		set_country_flag = TAK_failrule_flag
+	}
+}
+
+country_event = {
+	id = taki.1
+	title = taki.1.t
+	desc = taki.1.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = taki.1.a
+	}
+}

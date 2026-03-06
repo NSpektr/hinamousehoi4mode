@@ -1,0 +1,17 @@
+characters = {
+	CEP_poco = {
+		name = CEP_poco
+
+		portraits = {
+			civilian = {
+				large = "gfx/leader/CEP_poco.tga"
+			}
+		}
+
+		country_leader = {
+			ideology = cephalon_society
+			desc = CEP_poco_desc
+			id = -1
+		}
+	}
+}

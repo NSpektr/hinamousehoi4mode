@@ -1,0 +1,13 @@
+add_namespace = suflash
+
+country_event = {
+	id = suflash.1
+	title = suflash.1.t
+	desc = suflash.1.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suflash.1.a
+	}
+}

@@ -1,0 +1,57 @@
+SUF_flash_category = {
+	SUF_flash_close_decision = {
+		allowed = {
+			always = yes
+		}
+		available = {
+			always = no
+		}
+		priority = 100
+		fire_only_once = yes
+	}
+	SUF_flash_manpower_decision = {
+		allowed = {
+			always = yes
+		}
+		visible = {
+			has_completed_focus = SUF_manpower_by_flash_focus
+		}
+		available = {
+			has_completed_focus = SUF_manpower_by_flash_focus
+		}
+		days_re_enable = 100
+		cost = 100
+		custom_cost_trigger = {
+			check_variable = {
+				flash_limit > 99
+			}
+		}
+		custom_cost_text = SUF_decision_manpower_PP_100_flash_100
+		priority = 90
+		
+	}
+	SUF_flash_change_mission = {
+		activation = {
+			always = yes
+		}
+		available = {
+			always = no
+		}
+		#cancel_trigger = {
+		#}
+		is_good = yes
+		days_mission_timeout = 30
+		timeout_effect = {
+			add_variable = {
+				var = flash_count
+				value = flash_plus
+			}
+			subtract_from_variable = {
+				var = flash_count
+				value = flash_minus
+			}
+			custom_effect_tooltip = SUF_flash_change_tt
+		}
+		priority = 0
+	}
+}

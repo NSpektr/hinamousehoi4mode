@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_DUM_crysalis_left_side
+		texturefile = "gfx/interface/bop/DUM_crysalis_left_side.dds"
+	}
+	spriteType = {
+		name = GFX_DUM_doomsman_right_side
+		texturefile = "gfx/interface/bop/DUM_doomsman_right_side.dds"
+	}
+}

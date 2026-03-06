@@ -1,0 +1,172 @@
+characters = {
+	HMM_hina = {
+		name = HMM_hina
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HMM_hina.tga"
+			}
+		}
+		country_leader = {
+			ideology = hinaism
+			desc = HMM_hina_desc
+			id = -1
+			traits = { HMM_chmish_trait }
+		}
+	}
+	
+	HMM_council = {
+		name = HMM_council
+		portraits = {
+			civilian = {
+				#large = 
+			}
+		}
+		country_leader = {
+			ideology = hinaism
+			desc = HMM_council_desc
+			id = -1
+		}
+	}
+	
+	HMM_hina_dem = {
+		name = HMM_hina_dem
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HMM_hina.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_hinaism
+			desc = HMM_hina_dem_desc
+			id = -1
+			traits = { HMM_chmish_trait }
+		}
+	}
+	
+	HMM_takinakero = {
+		name = HMM_takinakero
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HMM_takinakero.tga"
+				small = "gfx/leaders/HMM_advisor_takinakero.tga"
+			}
+			army = {
+				large = "gfx/leaders/HMM_takinakero.tga"
+				small = "gfx/leaders/HMM_advisor_takinakero.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_hinaism
+			desc = HMM_president_takinakero_desc
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = HMM_takinakero_advisor_idea
+			#ledger = army
+			cost = 200
+			traits = { HMM_takinakero_trait }
+		}
+		field_marshal = {
+			skill = 10
+			attack_skill = 8
+			defense_skill = 8
+			planning_skill = 7
+			logistics_skill = 8
+		}
+	}
+	
+	HMM_hina_com = {
+		name = HMM_hina_com
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HMM_hina.tga"
+			}
+		}
+		country_leader = {
+			ideology = marxism_hinaism
+			desc = HMM_hina_com_desc
+			id = -1
+			traits = { HMM_chmish_trait }
+		}
+	}
+	
+	HMM_hina_fas = {
+		name = HMM_hina_fas
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HMM_hina.tga"
+			}
+		}
+		country_leader = {
+			ideology = national_hinaism
+			desc = HMM_hina_fas_desc
+			id = -1
+			traits = { HMM_chmish_trait }
+		}
+	}
+	
+	HMM_hebi_gnidaruma = {
+		name = HMM_hebi_gnidaruma
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HMM_hebi_gnidaruma.tga"
+			}
+		}
+		country_leader = {
+			ideology = mishinism
+			desc = HMM_hebi_gnidaruma_desc
+			id = -1
+		}
+	}
+	
+	HMM_konikeks = {
+		name = HMM_konikeks
+		portraits = {
+			civilian = {
+				#large
+			}
+		}
+		
+	}
+	
+	HMM_noisy = {
+		name = HMM_noisy
+		portraits = {
+			civilian = {
+				#large =
+			}
+		}
+		
+	}
+
+	HMM_evg = {
+		name = HMM_evg
+		portraits = {
+			civilian = {
+				#large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = HMM_evg_vodonos_advisor_idea
+			cost = 300
+			traits = { HMM_vodonos_trait }
+		}
+	}
+
+	HMM_tasik = {
+		name = HMM_tasik
+		portraits = {
+			civilian = {
+				#large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = HMM_tasik_advisor_idea
+			cost = 100
+			traits = { HMM_tasik_trait }
+		}
+	}
+}

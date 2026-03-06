@@ -1,0 +1,30 @@
+# DUM_crysalis_doomsman_balance = {
+# 	initial_value = 0.1
+# 	left_side = crysalis_left_side
+# 	right_side = doomsman_right_side
+# 	decision_category = DUM_crysalis_doomsman_category
+	
+# 	range = {
+# 		id = mid_range
+# 		min = -0.1
+# 		max = 0.1
+# 	}
+	
+# 	side = {
+# 		id = crysalis_left_side
+# 		icon = crysalis_left_side
+# 		range = {
+# 			id = crysalis_left_side_range
+# 			min = -1
+# 			max = -0.1
+# 		}
+# 	}
+	
+# 	side = {
+# 		id = doomsman_right_side
+# 		icon = doomsman_right_side
+# 		range = doomsman_right_side_range
+# 		min = 0.1
+# 		max = 1
+# 	}
+# }

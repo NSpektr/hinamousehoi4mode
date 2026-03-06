@@ -1,0 +1,10 @@
+TAK_integrate_category = {
+	allowed = {
+		tag = TAK
+	}
+	visible = {
+		has_completed_focus = TAK_creation_of_protectorat_focus
+		NOT = { has_country_flag = TAK_failrule_flag }
+	}
+	priority = 100
+}

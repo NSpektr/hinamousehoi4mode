@@ -1,0 +1,15 @@
+characters = {
+	KYU_yuko = {
+		name = KYU_yuko
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KYU_yuko.tga"
+			}
+		}
+		country_leader ={
+			ideology = yukoism
+			desc = KYU_yuko_desc
+			id = -1
+		}
+	}
+}

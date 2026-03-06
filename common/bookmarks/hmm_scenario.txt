@@ -1,0 +1,27 @@
+bookmarks = {
+	bookmark = {
+		name = hmm_bookmark
+		desc = hmm_bookmark_desc
+		date = 1936.1.1.12
+		picture = GFX_select_date_1936
+		
+		default = yes
+		default_country = HMM
+		
+		HMM = {
+			history = HMM_SCENARIO_DESC
+			ideology = neutrality
+		}
+		SUF = {
+			history = SUF_SCENARIO_DESC
+			ideology = fascism
+		}
+		DUM = {
+			history = DUM_SCENARIO_DESC
+			ideology = neutrality
+		}
+		"---" = {
+			history = OTHER_SCENARIO_DESC
+		}
+	}
+}

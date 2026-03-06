@@ -1,0 +1,9 @@
+MARE_GAMING_category = {
+	allowed = {
+		always = yes
+	}
+	visible = {
+		NOT = { has_country_flag = MARE_GAMING_deactivated }
+	}
+	priority = 300
+}

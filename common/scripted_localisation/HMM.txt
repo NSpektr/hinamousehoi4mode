@@ -1,0 +1,24 @@
+defined_text = {
+	name = HMM_people_nagation_loc
+	text = {
+		trigger = {
+			check_variable = { people_nagation = 1 }
+		}
+		localization_key = HMM_people_nagation_1_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { people_nagation = 2 }
+		}
+		localization_key = HMM_people_nagation_2_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { people_nagation = 3 }
+		}
+		localization_key = HMM_people_nagation_3_tt
+	}
+	text = {
+		localization_key = HMM_people_nagation_0_tt
+	}
+}

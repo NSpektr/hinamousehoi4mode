@@ -1,0 +1,181 @@
+shared_focus = {
+	id = SUF_suflashs_state_focus
+	
+	x = 10
+	y = 2
+	cost = 5
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		add_political_power = 100
+		add_stability = 0.1
+		country_event = { id = suflash.1 }
+	}
+}
+shared_focus = {
+	id = SUF_open_flash_focus
+	
+	x = 10
+	y = 3
+	cost = 5
+	
+	prerequisite = { focus = SUF_suflashs_state_focus }
+	
+	#icon
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		hidden_effect = {
+			add_to_variable = {
+				var = flash_count
+				value = 200
+			}
+		}
+		custom_effect_tooltip = SUF_add_200_flash_tt
+	}
+}
+#Special Flash Project
+shared_focus = {
+	id = SUF_infrastructure_by_flash_focus
+	
+	x = 20
+	y = 2
+	cost = 10
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		custom_effect_tooltip = SUF_open_infrastructure_tt
+	}
+}
+shared_focus = {
+	id = SUF_war_fabric_by_flash_focus
+	
+	x = 18
+	y = 3
+	cost = 10
+	
+	prerequisite = { focus = SUF_infrastructure_by_flash_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		custom_effect_tooltip = SUF_open_war_fabric_tt
+	}
+}
+shared_focus = {
+	id = SUF_civil_fabric_by_flash_focus
+	
+	x = 22
+	y = 3
+	cost = 10
+	
+	prerequisite = { focus = SUF_infrastructure_by_flash_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		custom_effect_tooltip = SUF_open_civil_fabric_tt
+	}
+}
+shared_focus = {
+	id = SUF_manpower_by_flash_focus
+	
+	x = 20
+	y = 4
+	cost = 10
+	
+	prerequisite = { focus = SUF_war_fabric_by_flash_focus }
+	prerequisite = { focus = SUF_civil_fabric_by_flash_focus }
+	
+	#icon =
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		custom_effect_tooltip = SUF_open_manpower_tt
+	}
+}
+shared_focus = {
+	id = SUF_stability_by_flash_focus
+	
+	x = 18
+	y = 5
+	cost = 10
+	
+	prerequisite = { focus = SUF_manpower_by_flash_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		custom_effect_tooltip = SUF_open_stability_tt
+	}
+}
+shared_focus = {
+	id = SUF_war_support_by_flash_focus
+	
+	x = 22
+	y = 5
+	cost = 10
+	
+	prerequisite = { focus = SUF_manpower_by_flash_focus }
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		custom_effect_tooltip = SUF_open_war_support_tt
+	}
+}
+shared_focus = {
+	id = SUF_territory_by_flash_focus
+	
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = SUF_need_1000_flash_tt
+			check_variable = {
+				flash_count > 999
+			}
+		}
+	}
+	
+	x = 20
+	y = 6
+	cost = 20
+	
+	prerequisite = { focus = SUF_stability_by_flash_focus }
+	prerequisite = { focus = SUF_war_support_by_flash_focus }
+	
+	#icon =
+	ai_will_do = {	
+		factor = 300
+	}
+	
+	completion_reward = {
+		hidden_effect = {
+			
+		}
+		custom_effect_tooltip = SUF_take_czuwaszyja_tt
+	}
+}

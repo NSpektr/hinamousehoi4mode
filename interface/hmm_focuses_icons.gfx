@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_focus_HMM_hina_territory"
+		texturefile = "gfx/interface/focus/HMM_hina_territory.tga"
+	}
+}

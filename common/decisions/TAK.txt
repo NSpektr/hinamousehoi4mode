@@ -1,0 +1,120 @@
+# TAK_integrate_category = {
+# 	TAK_integrate_start = {
+# 		activation = {
+# 			NOT = {
+# 				check_variable = {
+# 					var = integrate_procent
+# 					value = 100
+# 					compare = equals
+# 				}
+# 			}
+# 		}
+# 		days_remove = 100
+# 		remove_effect = {
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						check_variable = {
+# 							var = integrate_procent
+# 							value = 100
+# 							compare = equals
+# 						}
+# 					}
+# 				}
+# 				add_to_variable = {
+# 					var = integrate_procent
+# 					value = 2
+# 				}
+# 			}
+# 		}
+# 	}
+# 	TAK_integrate_procent_fall_mission = {
+# 		activation = {
+# 			NOT = {
+# 				check_variable = {
+# 					var = integrate_procent
+# 					value = 100
+# 					compare = equals
+# 				}
+# 			}	
+# 		}
+# 		cancel_trigger = {
+# 			check_variable = {
+# 				var = integrate_procent
+# 				value = 100
+# 				compare = equals
+# 			}
+# 		}
+# 		days_mission_timeout = 180
+# 		priority = 1
+# 		complete_effect = {
+			
+# 		}
+# 		timeout_effect = {
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						check_variable = {
+# 							var = integrate_procent
+# 							value = 0
+# 							compare = equals
+# 						}
+# 					}
+# 				}
+# 				subtract_from_variable = {
+# 					var = integrate_procent
+# 					value = 1
+# 				}
+# 			}
+# 		}
+# 	}
+# 	TAK_public_discontent_rise_mission = {
+# 		activation = {
+# 			NOT = {
+# 				check_variable = {
+# 					var = integrate_procent
+# 					value = 100
+# 					compare = equals
+# 				}
+# 			}
+# 		}
+# 		cancel_trigger = {
+# 			check_variable = {
+# 				value = integrate_procent
+# 				value = 100
+# 				compare = equals
+# 			}
+# 		}
+# 		days_mission_timeout = 260
+# 		priority = 0
+# 		complete_effect = {
+# 		}
+# 		timeout_effect = {
+# 		    if = {
+# 				limit = {
+# 					NOT = {
+# 						check_variable = {
+# 							var = public_discontent
+# 							value = 100
+# 							compare = equals
+# 						}
+# 					}
+# 				}
+# 				add_to_variable = {
+# 					value = public_discontent
+# 					value = 1
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					check_variable = {
+# 						var = public_discontent
+# 						value = 100
+# 						compare = equals
+# 					}
+# 				}
+# 				country_event = { id = taki_over.1 }
+# 			}
+# 		}
+# 	}
+# }

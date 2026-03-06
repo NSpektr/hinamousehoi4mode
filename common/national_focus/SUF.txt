@@ -1,0 +1,14 @@
+focus_tree = {
+	id = SUF_first_focus_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 300
+			tag = SUF
+		}
+	}
+	
+	shared_focus = SUF_suflashs_state_focus
+	shared_focus = SUF_infrastructure_by_flash_focus
+}

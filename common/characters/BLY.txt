@@ -1,0 +1,15 @@
+characters = {
+	BLY_blyoka = {
+		name = BLY_blyoka
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BLY_blyoka.tga"
+			}
+		}
+		country_leader ={
+			ideology = blyokaism
+			desc = BLY_blyoka_desc
+			id = -1
+		}
+	}
+}

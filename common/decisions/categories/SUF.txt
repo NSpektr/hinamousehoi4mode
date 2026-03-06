@@ -1,0 +1,9 @@
+SUF_flash_category = {
+	allowed = {
+		tag = SUF
+	}
+	visible = {
+		always = yes
+	}
+	priority = 400
+}

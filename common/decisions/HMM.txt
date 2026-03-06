@@ -1,0 +1,171 @@
+HMM_lore_diary_category = {
+	HMM_first_record_decision = {
+		allowed = {
+			always = yes
+		}
+		visible = {
+			has_country_flag = HMM_ld_first_flag
+		}
+		priority = 1
+		complete_effect = {
+			country_event = { id = lore_diary.1 }
+		}
+	}
+}
+
+HMM_people_nagation_category = {
+	HMM_calm_down_peoples_decision = {
+		allowed = {
+			tag = HMM
+		}
+		visible = {
+			always = yes
+		}
+		available = {
+			check_variable = {
+				people_nagation > 0
+			}
+		}
+		priority = 10
+		days_re_enable = 100
+		cost = 100
+		
+		complete_effect = {
+			hidden_effect = {
+				subtract_from_variable = {
+					var = people_nagation
+					value = 1
+				}
+			}
+			custom_effect_tooltip = HMM_small_calm_down_tt
+		}
+	}
+	HMM_overthrone_mission = {
+		activation = {
+			check_variable = { people_nagation = 3 }
+		}
+		cancel_trigger = {
+			check_variable = { people_nagation < 3 }
+		}
+		icon = mission_icon
+
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = no
+
+		timeout_effect = {
+			country_event = { id = hina_civil.1 }
+		}
+	}
+}
+# HMM_elections_category = {
+# 	HMM_close_elections_decision = {
+# 		allowed = {
+# 			always = yes
+# 		}
+# 		available = {
+# 			always = no
+# 		}
+# 		priority = 100
+# 		fire_only_once = yes
+# 		complete_effect = {
+# 			country_event = { id = hina_republic.2 }
+# 		}
+# 	}
+# 	HMM_noisy_support_decision = {
+# 		allowed = {
+# 			always = yes
+# 		}
+# 		visible = {
+# 			has_completed_focus = HMM_noisy_party_focus
+# 		}
+# 		days_re_enable = 100
+# 		priority = 90
+# 		cost = 50
+# 		complete_effect = {
+# 			add_to_variable = {
+# 				var = HMM_noisy_support_var
+# 				value = 10
+# 			}
+# 			if = {
+# 				limit = { check_variable = { HMM_noisy_support_var > 100 } }
+# 				set_variable = {
+# 					var = HMM_noisy_support_var
+# 					value = 100
+# 				}
+# 			}
+# 		}
+# 	}
+# 	HMM_taki_support_decision = {
+# 		allowed = {
+# 			always = yes
+# 		}
+# 		visible = {
+# 			has_completed_focus = HMM_taki_party_focus
+# 		}
+# 		days_re_enable = 100
+# 		priority = 80
+# 		cost = 50
+# 		complete_effect = {
+# 			add_to_variable = {
+# 				var = HMM_taki_support_var
+# 				value = 10
+# 			}
+# 			if = {
+# 				limit = { check_variable = { HMM_taki_support_var > 100 } }
+# 				set_variable = {
+# 					var = HMM_taki_support_var
+# 					value = 100
+# 				}
+# 			}
+# 		}
+# 	}
+# 	HMM_koni_support_decision = {
+# 		allowed = {
+# 			always = yes
+# 		}
+# 		visible = {
+# 			has_completed_focus = HMM_koni_party_focus
+# 		}
+# 		days_re_enable = 100
+# 		priority = 70
+# 		cost = 50
+# 		complete_effect = {
+# 			add_to_variable = {
+# 				var = HMM_koni_support_var
+# 				value = 10
+# 			}
+# 			if = {
+# 				limit = { check_variable = { HMM_koni_support_var > 100 } }
+# 				set_variable = {
+# 					var = HMM_koni_support_var
+# 					value = 100
+# 				}
+# 			}
+# 		}
+# 	}
+# 	HMM_hebi_support_decision = {
+# 		allowed = {
+# 			always = yes
+# 		}
+# 		visible = {
+# 			has_completed_focus = HMM_hebi_party_focus
+# 		}
+# 		days_re_enable = 100
+# 		priority = 60
+# 		cost = 50
+# 		complete_effect = {
+# 			add_to_variable = {
+# 				var = HMM_hebi_support_var
+# 				value = 10
+# 			}
+# 			if = {
+# 				limit = { check_variable = { HMM_hebi_support_var > 100 } }
+# 				set_variable = {
+# 					var = HMM_hebi_support_var
+# 					value = 100
+# 				}
+# 			}
+# 		}
+# 	}
+# }

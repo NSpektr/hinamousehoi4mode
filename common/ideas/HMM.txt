@@ -1,0 +1,66 @@
+ideas = {
+	country = {
+		HMM_vibe_decoy_idea = {
+			#picture = 
+			modifier = {
+				stability_factor = 0.2
+				political_power_gain = 0.1
+			}
+		}
+		HMM_peaceful_people_idea = {
+			#picture =
+			modifier = {
+				conscription_factor = -0.2
+				mobilization_laws_cost_factor = 0.5
+				mobilization_speed = -0.5
+				war_support_factor = -0.2
+				training_time_army_factor = 0.2
+			}
+		}
+		HMM_stagnation_1_idea = {
+			modifier = {
+				political_power_gain = -0.3
+				stability_factor = -0.05
+				conscription_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.3
+				research_speed_factor = -0.1
+				consumer_goods_factor = 0.4
+				production_speed_buildings_factor = -0.3
+			}
+		}
+		HMM_stagnation_2_idea = {
+			modifier = {
+				political_power_gain = -0.2
+				conscription_factor = -0.03
+				production_factory_efficiency_gain_factor = -0.15
+				research_speed_factor = -0.05
+				consumer_goods_factor = 0.3
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		HMM_stagnation_3_idea = {
+			modifier = {
+				political_power_gain = -0.1
+				production_factory_efficiency_gain_factor = -0.07
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		HMM_war_with_corruption_idea = {
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.05
+			}
+		}
+		HMM_quick_industrial_plans_idea = {
+			modifier = {
+				production_speed_buildings_factor = -0.2
+			}
+		}
+		HMM_new_production_tech_idea = {
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.15
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+characters = {
+	MRF_marffa = {
+		name = MRF_marffa
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MRF_marffa.tga"
+			}
+		}
+		country_leader ={
+			ideology = marffaism
+			desc = MRF_marffa_desc
+			id = -1
+		}
+	}
+}

@@ -1,0 +1,17 @@
+#TAKI START FOCUSES
+shared_focus = {
+	id = TAK_creation_of_protectorat_focus
+	
+	x = 10
+	y = 2
+	cost = 5
+	
+	#icon = 
+	ai_will_do = {
+		factor = 300
+	}
+	
+	completion_reward = {
+		country_event = { id = taki.1 days = 2 }
+	}
+}

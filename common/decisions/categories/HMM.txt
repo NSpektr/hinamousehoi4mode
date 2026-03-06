@@ -1,0 +1,32 @@
+HMM_lore_diary_category = {
+	allowed = {
+		tag = HMM
+	}
+	visible = {
+		has_country_flag = HMM_lore_diary_flag
+	}
+	visible_when_empty = yes
+	priority = 150
+}
+
+HMM_people_nagation_category = {
+	allowed = {
+		tag = HMM
+	}
+	visible = {
+		has_country_flag = HMM_radical_reforms_flag
+		has_completed_focus = HMM_radical_reforms_focus
+	}
+	visible_when_empty = yes
+	priority = 200
+}
+
+HMM_elections_category = {
+	allowed = {
+		tag = HMM
+	}
+	visible = {
+		always = no
+	}
+	priority = 100
+}

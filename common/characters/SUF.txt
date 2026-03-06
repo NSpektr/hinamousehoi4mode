@@ -1,0 +1,27 @@
+characters = {
+	SUF_suflash = {
+		name = SUF_suflash
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUF_suflash.tga"
+			}
+			army = {
+				large = "gfx/leaders/SUF_suflash.tga"
+			}
+		}
+		country_leader = {
+			ideology = cult_of_suflash
+			desc = SUF_suflash_desc
+			id = -1
+			traits = { SUF_brilliant_strategist_trait }
+		}
+		field_marshal = {
+			skill = 10
+			attack_skill = 10
+			defense_skill = 10
+			planning_skill = 10
+			logistics_skill = 10
+			traits = { SUF_brilliant_strategist_army_trait }
+		}
+	}
+}

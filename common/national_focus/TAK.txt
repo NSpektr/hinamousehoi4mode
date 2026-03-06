@@ -1,0 +1,13 @@
+focus_tree = {
+	id = TAK_start_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 300
+			tag = TAK
+		}
+	}
+	
+	shared_focus = TAK_creation_of_protectorat_focus
+}
