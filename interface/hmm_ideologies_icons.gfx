@@ -23,4 +23,8 @@ spriteTypes = {
 		name = "GFX_ideology_cult_of_suflash"
 		texturefile = "gfx/ideologies/suflash.tga"
 	}
+	spriteType = {
+		name = "GFX_ideology_cephalon_society"
+		texturefile = "gfx/ideologies/cephalon_society.tga"
+	}
 }

@@ -260,6 +260,10 @@ ideologies = {
 			yukoism = {
 				can_be_randomly_selected = no
 			}
+
+			tetoism = {
+				can_be_randomly_selected = no
+			}
 		}
 
 		dynamic_faction_names = {

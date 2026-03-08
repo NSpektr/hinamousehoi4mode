@@ -1,0 +1,13 @@
+focus_tree = {
+	id = CEP_start_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = CEP
+		}
+	}
+
+	shared_focus = CEP_freedom_focus
+}

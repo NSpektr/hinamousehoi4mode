@@ -163,6 +163,79 @@ country_event = {
 
 	option = {
 		name = hina_civil.1.a
+		add_stability = -0.1
+		add_war_support = -0.1
+	}
+}
+
+country_event = {
+	id = hina_civil.2
+	title = hina_civil.2.t
+	desc = hina_civil.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = hina_civil.2.a
+
+		ai_chance = {
+			factor = 0
+		}
+
+		64 = {
+			transfer_state_to = CEP
+		}
+
+		CEP = {
+			inherit_technology = HMM
+
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+
+				load_oob = "CEP_nsb.txt"
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+
+				load_oob = "CEP_legacy.txt"
+			}
+			change_tag_from = HMM
+		}
+	}
+
+	option = {
+		name = hina_civil.2.b
+
+		64 = {
+			transfer_state_to = CEP
+		}
+
+		CEP = {
+			inherit_technology = HMM
+
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+
+				load_oob = "CEP_nsb.txt"
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+
+				load_oob = "CEP_legacy.txt"
+			}
+		}
 	}
 }
 

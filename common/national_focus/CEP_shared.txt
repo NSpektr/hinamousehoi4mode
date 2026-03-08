@@ -1,0 +1,18 @@
+shared_focus = {
+	id = CEP_freedom_focus
+
+	x = 5
+	y = 0
+	cost = 5
+
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.05
+
+		country_event = { id = cephalon.1 }
+	}
+}

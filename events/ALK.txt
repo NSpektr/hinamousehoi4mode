@@ -1,0 +1,25 @@
+add_namespace = aleksa_cephalon
+
+#CEPHALON EVENTS
+country_event = {
+	id = aleksa_cephalon.1
+	title = aleksa_cephalon.1.t
+	desc = aleksa_cephalon.1.desc
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ALK
+		CEP = {
+			has_cosmetic_tag = CEP_SOCIETY
+		}
+	}
+
+	option = {
+		name = aleksa_cephalon.1.a
+	}
+
+	option = {
+		name = aleksa_cephalon.1.b
+	}
+}

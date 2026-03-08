@@ -36,6 +36,14 @@ CEP = {
 	color = rgb { 34 11 41 }
 	color_ui = rgb { 34 11 41 }
 }
+TET = {
+	color = rgb { 204 53 53 }
+	color_ui = rgb { 204 53 53 }
+}
+GEL = {
+	color = rgb { 93 36 163 }
+	color_ui = rgb { 93 36 163 }
+}
 
 GER = {
 	color = HSV { 0.1 0.15 0.4 }

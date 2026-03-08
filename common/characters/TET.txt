@@ -1,0 +1,15 @@
+characters = {
+	TET_teto = {
+		name = TET_teto
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TET_teto.tga"
+			}
+		}
+		country_leader ={
+			ideology = tetoism
+			desc = BLY_blyoka_desc
+			id = -1
+		}
+	}
+}
