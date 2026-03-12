@@ -62,5 +62,21 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.15
 			}
 		}
+		HMM_fight_with_corruption_idea = {
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.05
+			}
+		}
+		HMM_gradually_industrialisation_plans_idea = {
+			modifier = {
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		HMM_update_production_tech_idea = {
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.07
+			}
+		}
 	}
 }

@@ -1,0 +1,16 @@
+unique_id = hmm_achievements
+
+united_suflash_emirates = {
+	possible = {
+		difficulty > 1
+		has_ironman = yes
+		has_any_custom_difficulty_setting = no
+		tag = SUF
+	}
+
+	happened = {
+		SUF = {
+			owns_state = 658
+		}
+	}
+}

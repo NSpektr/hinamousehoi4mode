@@ -134,10 +134,16 @@ characters = {
 		name = HMM_noisy
 		portraits = {
 			civilian = {
-				#large =
+				large = "gfx/leaders/HMM_noisy.tga"
+				small = "gfx/leaders/HMM_advisor_noisy.tga"
 			}
 		}
-		
+		advisor = {
+			slot = political_advisor
+			idea_token = HMM_noisy_advisor_idea
+			cost = 150
+			traits = { HMM_noisy_trait }
+		}
 	}
 
 	HMM_evg = {
@@ -145,6 +151,7 @@ characters = {
 		portraits = {
 			civilian = {
 				#large
+				small = "gfx/leaders/HMM_advisor_placeholder.tga"
 			}
 		}
 		advisor = {

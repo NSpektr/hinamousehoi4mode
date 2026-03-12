@@ -8,11 +8,13 @@
     HMM_hebi_gnidaruma:0 "Хеби Гнидарума"
     HMM_evg:0 "Евг Водонос"
     HMM_tasik:0 "Тазик"
+    HMM_noisy:0 "Нойзи"
     
     HMM_chmish_trait:0 "Чмышь"
     HMM_takinakero_trait:0 "Модератор"
     HMM_vodonos_trait:0 "V.I.P. водонос"
     HMM_tasik_trait:0 "Просто тазик"
+    HMM_noisy_trait:0 "Гармонит"
     
     HMM_neutrality:0 "Территория Хины"
     HMM_neutrality_DEF:0 "Территория Хины"
@@ -50,6 +52,8 @@
     HMM_for_peoples_focus_desc:0 "Наш народ достоин процветания!"
     HMM_for_hina_focus:0 "Блага для Хины"
     HMM_for_hina_focus_desc:0 "Разве Хина не заслужила этого?"
+    HMM_stagnation_problem_focus:0 "Проблема стагнации"
+    HMM_stagnation_problem_focus_desc:0 "Экономика территории стагнирует: методы строительства и производства давно не улучшались, а управленцы погрязли в коррупции. С этим необходимо что-то делать, иначе это плохо кончится для Территории."
     HMM_radical_reforms_focus:0 "§RРадикальные реформы§!"
     HMM_radical_reforms_focus_desc:0 "Медлить нельзя! Стагнацию необходимо побороть как можно раньше, пока она не перешла в тотальный кризис. Даже если мы рискуем потерять всё."
     HMM_war_with_corruption_focus:0 "Война с коррупцией"

@@ -44,6 +44,9 @@ HMM_people_nagation_category = {
 		activation = {
 			check_variable = { people_nagation = 3 }
 		}
+		available = {
+			always = no
+		}
 		cancel_trigger = {
 			check_variable = { people_nagation < 3 }
 		}

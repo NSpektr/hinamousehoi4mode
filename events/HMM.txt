@@ -165,6 +165,83 @@ country_event = {
 		name = hina_civil.1.a
 		add_stability = -0.1
 		add_war_support = -0.1
+
+		hidden_effect = {
+			978 = {
+				set_demilitarized_zone = yes
+			}
+			28 = {
+				set_demilitarized_zone = yes
+			}
+			42 = {
+				set_demilitarized_zone = yes
+			}
+			8 = {
+				set_demilitarized_zone = yes
+			}
+			980 = {
+				set_demilitarized_zone = yes
+			}
+			34 = {
+				set_demilitarized_zone = yes
+			}
+			29 = {
+				set_demilitarized_zone = yes
+			}
+			6 = {
+				set_demilitarized_zone = yes
+			}
+			977 = {
+				set_demilitarized_zone = yes
+			}
+			35 = {
+				set_demilitarized_zone = yes
+			}
+			7 = {
+				set_demilitarized_zone = yes
+			}
+			36 = {
+				set_demilitarized_zone = yes
+			}
+			56 = {
+				set_demilitarized_zone = yes
+			}
+			59 = {
+				set_demilitarized_zone = yes
+			}
+			58 = {
+				set_demilitarized_zone = yes
+			}
+			909 = {
+				set_demilitarized_zone = yes
+			}
+			61 = {
+				set_demilitarized_zone = yes
+			}
+			62 = {
+				set_demilitarized_zone = yes
+			}
+			64 = {
+				set_demilitarized_zone = yes
+			}
+			57 = {
+				set_demilitarized_zone = yes
+			}
+			51 = {
+				set_demilitarized_zone = yes
+			}
+			55 = {
+				set_demilitarized_zone = yes
+			}
+			65 = {
+				set_demilitarized_zone = yes
+			}
+			60 = {
+				set_demilitarized_zone = yes
+			}
+
+			country_event = { id = hina_civil.2 days = 14 }
+		}
 	}
 }
 
@@ -183,27 +260,32 @@ country_event = {
 		}
 
 		64 = {
+			set_demilitarized_zone = no
 			transfer_state_to = CEP
+			add_core_of = CEP
 		}
 
 		CEP = {
-			inherit_technology = HMM
+			hidden_effect = {
+				inherit_technology = HMM
 
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-
-				load_oob = "CEP_nsb.txt"
-			}
-			if = {
-				limit = {
-					NOT = {
+				if = {
+					limit = {
 						has_dlc = "No Step Back"
 					}
-				}
 
-				load_oob = "CEP_legacy.txt"
+					load_oob = "CEP_nsb.txt"
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "No Step Back"
+						}
+					}
+
+					load_oob = "CEP_legacy.txt"
+				}
+				country_event = { id = hina_civil.3 days = 15 }
 			}
 			change_tag_from = HMM
 		}
@@ -213,29 +295,46 @@ country_event = {
 		name = hina_civil.2.b
 
 		64 = {
+			set_demilitarized_zone = no
 			transfer_state_to = CEP
+			add_core_of = CEP
 		}
 
 		CEP = {
-			inherit_technology = HMM
+			hidden_effect = {
+				inherit_technology = HMM
 
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-
-				load_oob = "CEP_nsb.txt"
-			}
-			if = {
-				limit = {
-					NOT = {
+				if = {
+					limit = {
 						has_dlc = "No Step Back"
 					}
-				}
 
-				load_oob = "CEP_legacy.txt"
+					load_oob = "CEP_nsb.txt"
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "No Step Back"
+						}
+					}
+
+					load_oob = "CEP_legacy.txt"
+				}
+				country_event = { id = hina_civil.3 days = 15 }
 			}
 		}
+	}
+}
+
+country_event = {
+	id = hina_civil.3
+	title = hina_civil.3.t
+	desc = hina_civil.3.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = hina_civil.3.a
 	}
 }
 

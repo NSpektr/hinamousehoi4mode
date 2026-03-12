@@ -6,7 +6,7 @@ shared_focus = {
 	y = 0
 	cost = 5
 	
-	#icon = GFX_focus_HMM_hina_territory
+	icon = GFX_focus_HMM_hina_territory
 	ai_will_do = {
 		factor = 300
 	}
@@ -111,6 +111,10 @@ shared_focus = {
 	y = 1
 	relative_position_id = HMM_radical_reforms_focus
 
+	available = {
+		check_variable = { people_nagation < 3 }
+	}
+
 	prerequisite = { focus = HMM_radical_reforms_focus }
 	cost = 5
 
@@ -142,6 +146,10 @@ shared_focus = {
 	y = 1
 	relative_position_id = HMM_war_with_corruption_focus
 
+	available = {
+		check_variable = { people_nagation < 3 }
+	}
+
 	prerequisite = { focus = HMM_war_with_corruption_focus }
 	cost = 5
 
@@ -153,7 +161,7 @@ shared_focus = {
 	completion_reward = {
 		add_timed_idea = {
 			idea = HMM_quick_industrial_plans_idea
-			days = 365
+			days = 300
 		}
 		hidden_effect = {
 			add_to_variable = {
@@ -171,6 +179,10 @@ shared_focus = {
 	y = 1
 	relative_position_id = HMM_radical_reforms_focus
 
+	available = {
+		check_variable = { people_nagation < 3 }
+	}
+
 	prerequisite = { focus = HMM_radical_reforms_focus }
 	cost = 5
 
@@ -182,7 +194,7 @@ shared_focus = {
 	completion_reward = {
 		add_timed_idea = {
 			idea = HMM_new_production_tech_idea
-			days = 300
+			days = 250
 		}
 		hidden_effect = {
 			add_to_variable = {
@@ -215,6 +227,102 @@ shared_focus = {
 
 	completion_reward = {
 		custom_effect_tooltip = HMM_soft_reforms_tt
+	}
+}
+shared_focus = {
+	id = HMM_fight_with_corruption_focus
+
+	x = 0
+	y = 1
+	relative_position_id = HMM_soft_reforms_focus
+
+	prerequisite = { focus = HMM_soft_reforms_focus }
+	cost = 10
+
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = HMM_fight_with_corruption_idea
+			days = 365
+		}
+	}
+}
+shared_focus = {
+	id = HMM_gradually_industrialisation_plans_focus
+
+	x = 2
+	y = 1
+	relative_position_id = HMM_soft_reforms_focus
+
+	prerequisite = { focus = HMM_soft_reforms_focus }
+	cost = 10
+
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = HMM_gradually_industrialisation_plans_idea
+			days = 365
+		}
+	}
+}
+shared_focus = {
+	id = HMM_update_production_tech_focus
+
+	x = 0
+	y = 1
+	relative_position_id = HMM_fight_with_corruption_focus
+
+	prerequisite = { focus = HMM_fight_with_corruption_focus }
+	cost = 10
+
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = HMM_update_production_tech_idea
+			days = 365
+		}
+	}
+}
+
+shared_focus = {
+	id = HMM_first_successes
+
+	x = -1
+	y = 2
+	relative_position_id = HMM_update_production_tech_focus
+
+	prerequisite = {
+		focus = HMM_fight_with_corruption_focus
+		focus = HMM_war_with_corruption_focus
+	}
+	prerequisite = {
+		focus = HMM_gradually_industrialisation_plans_focus
+		focus = HMM_quick_industrialisation_plans_focus
+	}
+	prerequisite = {
+		focus = HMM_new_production_tech_focus
+		focus = HMM_update_production_tech_focus
+	}
+	cost = 10
+
+	ai_will_do = {
+		factor = 300
+	}
+
+	completion_reward = {
+		swap_ideas = {
+			add_idea = HMM_stagnation_2_idea
+			remove_idea = HMM_stagnation_1_idea
+		}
 	}
 }
 

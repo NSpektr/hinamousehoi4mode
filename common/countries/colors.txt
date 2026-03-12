@@ -9,8 +9,8 @@ DUM = {
 	color_ui = rgb { 249 255 71 }
 }
 SUF = {
-	color = rgb { 28 212 144 }
-	color_ui = rgb { 28 212 144 }
+	color = rgb { 16 87 46 }
+	color_ui = rgb { 16 87 46 }
 }
 TAK = {
 	color = rgb { 34 1 143 }

@@ -33,4 +33,14 @@ leader_traits = {
 			base = 2
 		}
 	}
+	HMM_noisy_trait = {
+		random = no
+		sprite = 1
+		stability_factor = 0.1
+		war_support_factor = -0.05
+
+		ai_will_do = {
+			base = 6
+		}
+	}
 }
